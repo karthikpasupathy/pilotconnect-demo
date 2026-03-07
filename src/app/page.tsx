@@ -370,8 +370,14 @@ export default function Home() {
       >
         <div className="grid gap-6 rounded-[2rem] border border-[var(--line)] bg-[var(--panel-strong)] p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
           <div className="rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,199,92,0.1),rgba(255,255,255,0.02))] p-7">
-            <div className="flex h-24 w-24 items-center justify-center rounded-[1.75rem] border border-[rgba(255,199,92,0.22)] bg-[linear-gradient(135deg,#ffd27d,#ff9f1c)] font-serif text-4xl text-[#1c1306]">
-              BJ
+            <div className="inline-flex rounded-[1.9rem] bg-[linear-gradient(135deg,#ffcf70,#ff9f1c)] p-[2px] shadow-[0_18px_48px_rgba(255,159,28,0.22)]">
+              <div className="overflow-hidden rounded-[1.8rem] bg-[#101010]">
+                <img
+                  src="/founder.jpg"
+                  alt="Bhushan Jaisingh"
+                  className="h-24 w-24 object-cover"
+                />
+              </div>
             </div>
             <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
               Founder
