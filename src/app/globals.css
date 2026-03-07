@@ -72,3 +72,56 @@ a {
   background: rgba(255, 199, 92, 0.28);
   color: #fff8ea;
 }
+
+@keyframes radar-sweep {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes radar-pulse {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 0.38;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes radar-blip {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  35% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+
+  60% {
+    opacity: 0.28;
+    transform: scale(0.92);
+  }
+}
+
+.radar-sweep {
+  animation: radar-sweep 3.8s linear infinite;
+}
+
+.radar-pulse {
+  animation: radar-pulse 2.4s ease-in-out infinite;
+}
+
+.radar-blip {
+  animation: radar-blip 2.8s ease-in-out infinite;
+}

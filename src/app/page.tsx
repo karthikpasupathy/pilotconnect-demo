@@ -164,8 +164,8 @@ export default function Home() {
             </div>
 
             <h1 className="mt-8 max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-[#fff7e8] sm:text-6xl lg:text-8xl">
-              Your CRM is full of revenue.
-              <span className="block italic text-[#ffc75c]">
+              Your CRM is full of revenue.{" "}
+              <span className="italic text-[#ffc75c]">
                 You just can&apos;t see it yet.
               </span>
             </h1>
