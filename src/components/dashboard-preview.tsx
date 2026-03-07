@@ -7,7 +7,11 @@ type RadarBlip = {
   x: number;
   y: number;
   delayMs: number;
+  durationMs: number;
   color: string;
+  sizePx: number;
+  haloPx: number;
+  coreOpacity: number;
 };
 
 function useCountUp(target: number, duration = 1400) {
@@ -40,16 +44,22 @@ function useCountUp(target: number, duration = 1400) {
 function createRadarBlips(count = 3): RadarBlip[] {
   return Array.from({ length: count }, (_, index) => {
     const angle = Math.random() * Math.PI * 2;
-    const distance = 12 + Math.random() * 18;
+    const distance = 8 + Math.random() * 20;
     const x = 50 + Math.cos(angle) * distance;
     const y = 50 + Math.sin(angle) * distance;
+    const sizePx = 2.5 + Math.random() * 1.5;
+    const haloPx = 4 + Math.random() * 2.5;
 
     return {
       id: `${Date.now()}-${index}-${Math.random().toString(36).slice(2, 7)}`,
       x,
       y,
-      delayMs: index * 450,
+      delayMs: Math.round(Math.random() * 1400),
+      durationMs: 2200 + Math.round(Math.random() * 1800),
       color: index === 1 ? "#d9ff9a" : "#b8ff72",
+      sizePx,
+      haloPx,
+      coreOpacity: 0.28 + Math.random() * 0.22,
     };
   });
 }
@@ -64,13 +74,13 @@ export function DashboardPreview() {
   const dormantAccounts = useCountUp(428, 1500);
   const contactHealth = useCountUp(63, 1700);
   const [radarBlips, setRadarBlips] = useState<RadarBlip[]>(() =>
-    createRadarBlips(),
+    createRadarBlips(4),
   );
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setRadarBlips(createRadarBlips());
-    }, 2200);
+      setRadarBlips(createRadarBlips(3 + Math.floor(Math.random() * 2)));
+    }, 2400);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -108,22 +118,33 @@ export function DashboardPreview() {
                       {radarBlips.map((blip) => (
                         <div
                           key={blip.id}
-                          className="radar-blip absolute h-1 w-1 rounded-full"
+                          className="radar-blip absolute rounded-full"
                           style={{
                             left: `${blip.x}%`,
                             top: `${blip.y}%`,
                             backgroundColor: blip.color,
-                            opacity: 0.5,
+                            width: `${blip.sizePx}px`,
+                            height: `${blip.sizePx}px`,
+                            marginLeft: `${-blip.sizePx / 2}px`,
+                            marginTop: `${-blip.sizePx / 2}px`,
+                            opacity: blip.coreOpacity,
                             animationDelay: `${blip.delayMs}ms`,
+                            animationDuration: `${blip.durationMs}ms`,
                           }}
                         >
                           <span
-                            className="absolute inset-[-4px] rounded-full blur-[5px]"
-                            style={{ backgroundColor: `${blip.color}33` }}
+                            className="absolute rounded-full blur-[6px]"
+                            style={{
+                              inset: `${-blip.haloPx}px`,
+                              backgroundColor: `${blip.color}24`,
+                            }}
                           />
                           <span
-                            className="absolute inset-[-1.5px] rounded-full blur-[1.5px]"
-                            style={{ backgroundColor: `${blip.color}24` }}
+                            className="absolute rounded-full blur-[2px]"
+                            style={{
+                              inset: `${-(blip.haloPx * 0.45)}px`,
+                              backgroundColor: `${blip.color}1f`,
+                            }}
                           />
                         </div>
                       ))}
