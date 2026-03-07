@@ -187,7 +187,7 @@ export default function Home() {
                   className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
                   style={{ color: "#120d05" }}
                 >
-                  →
+                  -&gt;
                 </span>
               </a>
               <a
@@ -197,7 +197,6 @@ export default function Home() {
                 See how the system works
               </a>
             </div>
-
           </div>
 
           <div className="relative flex items-start lg:pt-8">
@@ -350,7 +349,7 @@ export default function Home() {
                 ★★★★★
               </p>
               <p className="mt-5 font-serif text-2xl leading-9 tracking-[-0.03em] text-[#fff7e8]">
-                “{testimonial.quote}”
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
               <footer className="mt-8 border-t border-[var(--line)] pt-5">
                 <p className="text-sm font-medium text-white">
