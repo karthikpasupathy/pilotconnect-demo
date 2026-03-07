@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   title: "Pilot Connect | Premium CRM Cleanup & Revenue Data Enrichment",
   description:
     "Pilot Connect cleans, enriches, and scores B2B CRM data so dormant contacts turn into qualified pipeline in days, not quarters.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
