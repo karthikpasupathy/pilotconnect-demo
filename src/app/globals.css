@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090909;
-  --foreground: #f7f1df;
-  --muted: #b3aa96;
-  --line: rgba(255, 199, 92, 0.14);
-  --panel: rgba(15, 15, 15, 0.78);
-  --panel-strong: rgba(23, 23, 23, 0.92);
-  --accent: #ffc75c;
-  --accent-strong: #ff9f1c;
-  --accent-soft: rgba(255, 199, 92, 0.16);
+  --background: #f8fbff;
+  --foreground: #121826;
+  --muted: #55657d;
+  --line: rgba(20, 110, 245, 0.16);
+  --panel: rgba(255, 255, 255, 0.96);
+  --panel-strong: rgba(255, 255, 255, 0.985);
+  --accent: #146ef5;
+  --accent-strong: #60a5fa;
+  --accent-soft: rgba(20, 110, 245, 0.1);
+  --accent-ink: #0d47a1;
+  --glow: rgba(96, 165, 250, 0.14);
 }
 
 @theme inline {
@@ -34,9 +36,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
   background-image:
-    radial-gradient(circle at top, rgba(255, 159, 28, 0.2), transparent 30%),
-    radial-gradient(circle at 85% 15%, rgba(255, 199, 92, 0.1), transparent 20%),
-    linear-gradient(180deg, #0e0d0b 0%, #090909 42%, #050505 100%);
+    radial-gradient(circle at top, rgba(96, 165, 250, 0.06), transparent 34%),
+    radial-gradient(circle at 85% 15%, rgba(147, 197, 253, 0.05), transparent 22%),
+    radial-gradient(circle at 15% 55%, rgba(20, 110, 245, 0.02), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #fcfdff 42%, #f8fbff 100%);
 }
 
 body::before {
@@ -44,13 +47,13 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.18;
+  opacity: 0.2;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 20% 20%, rgba(255, 199, 92, 0.1), transparent 24%);
-  background-size: 72px 72px, 72px 72px, 100% 100%;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent);
+    linear-gradient(rgba(20, 110, 245, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 110, 245, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(96, 165, 250, 0.04), transparent 24%);
+  background-size: 64px 64px, 64px 64px, 100% 100%;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.45));
 }
 
 body::after {
@@ -58,10 +61,11 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.08;
+  opacity: 0.1;
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.9) 0.65px, transparent 0.8px);
-  background-size: 7px 7px;
+    radial-gradient(rgba(20, 110, 245, 0.12) 0.7px, transparent 0.85px);
+  background-size: 8px 8px;
+  mask-image: radial-gradient(circle at center, black, rgba(0, 0, 0, 0.72));
 }
 
 a {
@@ -69,8 +73,8 @@ a {
 }
 
 ::selection {
-  background: rgba(255, 199, 92, 0.28);
-  color: #fff8ea;
+  background: rgba(20, 110, 245, 0.2);
+  color: #0f172a;
 }
 
 @keyframes radar-sweep {

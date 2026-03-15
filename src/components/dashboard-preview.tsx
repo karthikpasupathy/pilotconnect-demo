@@ -56,7 +56,7 @@ function createRadarBlips(count = 3): RadarBlip[] {
       y,
       delayMs: Math.round(Math.random() * 1400),
       durationMs: 2200 + Math.round(Math.random() * 1800),
-      color: index === 1 ? "#d9ff9a" : "#b8ff72",
+      color: index === 1 ? "#93c5fd" : "#60a5fa",
       sizePx,
       haloPx,
       coreOpacity: 0.28 + Math.random() * 0.22,
@@ -86,7 +86,7 @@ export function DashboardPreview() {
   }, []);
 
   return (
-    <div className="w-full rounded-[2rem] border border-[rgba(255,199,92,0.18)] bg-[rgba(13,13,13,0.84)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:p-6">
+    <div className="w-full rounded-[2rem] border border-[rgba(20,110,245,0.16)] bg-[rgba(255,255,255,0.97)] p-5 shadow-[0_18px_48px_rgba(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,0.88)] backdrop-blur-xl sm:p-6">
       <div className="border-b border-[var(--line)] pb-4">
         <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
           GTM systems preview
@@ -94,26 +94,26 @@ export function DashboardPreview() {
       </div>
 
       <div className="mt-5 grid gap-4">
-                <div className="rounded-[1.5rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,199,92,0.08),rgba(255,255,255,0.02))] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(255,199,92,0.36)]">
+                <div className="rounded-[1.5rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(147,197,253,0.12),rgba(255,255,255,1))] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(20,110,245,0.28)]">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
                         Accounts re-prioritized
                       </p>
-                      <p className="mt-2 text-4xl font-semibold text-[#fff4d8]">
+                      <p className="mt-2 text-4xl font-semibold text-slate-900">
                         {dormantAccounts}
                       </p>
                     </div>
-                    <div className="relative h-18 w-18 overflow-hidden rounded-full border border-emerald-400/18 bg-[radial-gradient(circle,rgba(16,33,22,0.92)_0%,rgba(6,13,9,0.96)_72%)] shadow-[inset_0_0_28px_rgba(74,222,128,0.08)]">
-                      <div className="absolute inset-2 rounded-full border border-emerald-400/10" />
-                      <div className="absolute inset-[0.95rem] rounded-full border border-emerald-400/14" />
-                      <div className="absolute inset-[1.45rem] rounded-full border border-emerald-400/18" />
-                      <div className="radar-pulse absolute inset-0 rounded-full border border-emerald-300/14" />
-                      <div className="radar-pulse absolute inset-4 rounded-full border border-emerald-300/10 [animation-delay:400ms]" />
+                    <div className="relative h-18 w-18 overflow-hidden rounded-full border border-blue-400/18 bg-[radial-gradient(circle,rgba(232,244,255,0.96)_0%,rgba(214,233,255,0.98)_72%)] shadow-[inset_0_0_28px_rgba(20,110,245,0.08)]">
+                      <div className="absolute inset-2 rounded-full border border-blue-400/10" />
+                      <div className="absolute inset-[0.95rem] rounded-full border border-blue-400/14" />
+                      <div className="absolute inset-[1.45rem] rounded-full border border-blue-400/18" />
+                      <div className="radar-pulse absolute inset-0 rounded-full border border-blue-300/14" />
+                      <div className="radar-pulse absolute inset-4 rounded-full border border-blue-300/10 [animation-delay:400ms]" />
                       <div className="radar-sweep absolute left-1/2 top-1/2 h-[140%] w-[140%] origin-center">
-                        <div className="absolute left-1/2 top-1/2 h-[58%] w-[58%] -translate-y-full rounded-tr-full bg-[conic-gradient(from_180deg_at_0%_100%,rgba(190,255,137,0.34),rgba(74,222,128,0.14),rgba(74,222,128,0.02),transparent_62%)] blur-[5px]" />
-                        <div className="absolute left-1/2 top-1/2 h-1/2 w-[2px] -translate-x-1/2 -translate-y-full bg-[linear-gradient(180deg,rgba(190,255,137,0),rgba(190,255,137,0.95))] shadow-[0_0_14px_rgba(74,222,128,0.45)]" />
-                        <div className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-y-full rounded-tr-full bg-[conic-gradient(from_180deg_at_0%_100%,rgba(190,255,137,0.22),rgba(74,222,128,0.05),transparent_56%)]" />
+                        <div className="absolute left-1/2 top-1/2 h-[58%] w-[58%] -translate-y-full rounded-tr-full bg-[conic-gradient(from_180deg_at_0%_100%,rgba(96,165,250,0.38),rgba(20,110,245,0.16),rgba(20,110,245,0.02),transparent_62%)] blur-[5px]" />
+                        <div className="absolute left-1/2 top-1/2 h-1/2 w-[2px] -translate-x-1/2 -translate-y-full bg-[linear-gradient(180deg,rgba(96,165,250,0),rgba(20,110,245,0.95))] shadow-[0_0_14px_rgba(20,110,245,0.35)]" />
+                        <div className="absolute left-1/2 top-1/2 h-1/2 w-1/2 -translate-y-full rounded-tr-full bg-[conic-gradient(from_180deg_at_0%_100%,rgba(96,165,250,0.22),rgba(20,110,245,0.05),transparent_56%)]" />
                       </div>
                       {radarBlips.map((blip) => (
                         <div
@@ -148,31 +148,31 @@ export function DashboardPreview() {
                           />
                         </div>
                       ))}
-                      <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#b8ff72] shadow-[0_0_16px_rgba(74,222,128,0.55)]" />
+                      <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#146ef5] shadow-[0_0_16px_rgba(20,110,245,0.45)]" />
                     </div>
                   </div>
-                  <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/8">
-                    <div className="h-full w-[72%] rounded-full bg-[linear-gradient(90deg,#7dff9b,#22c55e)]" />
+                  <div className="mt-4 h-2 overflow-hidden rounded-full bg-blue-100">
+                    <div className="h-full w-[72%] rounded-full bg-[linear-gradient(90deg,#146ef5,#60a5fa)]" />
                   </div>
                 </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(255,199,92,0.36)]">
+          <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(20,110,245,0.28)]">
             <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
               Contact health
             </p>
-            <p className="mt-3 text-3xl font-semibold text-white">
+            <p className="mt-3 text-3xl font-semibold text-slate-900">
               +{contactHealth}%
             </p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
               Better usable coverage across the contacts that matter.
             </p>
           </div>
-          <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(255,199,92,0.36)]">
+          <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(20,110,245,0.28)]">
             <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
               Rep efficiency
             </p>
-            <p className="mt-3 text-3xl font-semibold text-white">3x faster</p>
+            <p className="mt-3 text-3xl font-semibold text-slate-900">3x faster</p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
               Less manual research and clearer prioritization before outreach.
             </p>
@@ -184,12 +184,12 @@ export function DashboardPreview() {
             {outcomes.map((item) => (
               <div
                 key={item}
-                className="inline-flex items-center gap-3 text-sm text-[#e9dfca]"
+                className="inline-flex items-center gap-3 text-sm text-slate-700"
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inset-[-4px] rounded-full bg-emerald-400/42 blur-[5px]" />
-                  <span className="absolute inset-[-1px] rounded-full bg-emerald-300/68 blur-[1.5px]" />
-                  <span className="relative h-2 w-2 rounded-full bg-[#b8ff72]" />
+                  <span className="absolute inset-[-4px] rounded-full bg-blue-400/32 blur-[5px]" />
+                  <span className="absolute inset-[-1px] rounded-full bg-blue-300/60 blur-[1.5px]" />
+                  <span className="relative h-2 w-2 rounded-full bg-[#146ef5]" />
                 </span>
                 <span>{item}</span>
               </div>
