@@ -51,12 +51,30 @@ const processIcons: Record<ProcessIconType, LucideIcon> = {
 };
 
 const offerings = [
-  "CRM cleanup and deduplication",
-  "Account and contact enrichment",
-  "Lead scoring and prioritization",
-  "Dormant pipeline reactivation",
-  "Field mapping and data structure",
-  "Ongoing refresh systems",
+  {
+    title: "CRM cleanup and deduplication",
+    body: "Remove duplicates, stale records, and broken ownership so your team can work from a cleaner database.",
+  },
+  {
+    title: "Account and contact enrichment",
+    body: "Fill key gaps across accounts and contacts with the context revenue teams need to act with confidence.",
+  },
+  {
+    title: "Lead scoring and prioritization",
+    body: "Rank records by fit and buying potential so reps know where to spend time first.",
+  },
+  {
+    title: "Dormant pipeline reactivation",
+    body: "Find overlooked accounts, revive old records, and turn neglected CRM data into active opportunities.",
+  },
+  {
+    title: "Field mapping and data structure",
+    body: "Create cleaner field architecture so reporting, routing, and enrichment workflows stay consistent.",
+  },
+  {
+    title: "Ongoing refresh systems",
+    body: "Set up repeatable refresh logic so the CRM stays useful instead of sliding back into decay.",
+  },
 ];
 
 const stack = [
@@ -232,16 +250,16 @@ export default function Home() {
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {offerings.map((item, index) => (
             <article
-              key={item}
+              key={item.title}
               className="group relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[var(--panel)] p-6 shadow-[0_14px_34px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:border-[rgba(20,110,245,0.24)] hover:bg-white"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(20,110,245,0.45),transparent)] opacity-0 transition group-hover:opacity-100" />
               <p className="text-sm text-[var(--accent)]">0{index + 1}</p>
-              <h3 className="mt-3 text-2xl font-medium text-slate-900">{item}</h3>
+              <h3 className="mt-3 text-2xl font-medium text-slate-900">
+                {item.title}
+              </h3>
               <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-                Built for B2B teams that already have leads and tools, but need
-                cleaner execution, stronger context, and clearer next actions
-                inside the CRM.
+                {item.body}
               </p>
             </article>
           ))}
@@ -262,9 +280,9 @@ export default function Home() {
               your revenue motion.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--muted)]">
-              The transcript made one thing clear: the best positioning is
-              consultative. We diagnose the real friction first, then build the
-              cleanup and enrichment system around it.
+              The work starts by identifying where bad data is slowing your
+              team down, then building the cleanup, enrichment, and
+              prioritization system around that bottleneck.
             </p>
           </div>
 

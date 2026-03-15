@@ -64,7 +64,7 @@ export function HeroCopySwitcher() {
         })}
       </div>
 
-      <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.02] tracking-[-0.03em] text-[#152033] sm:text-6xl lg:text-8xl">
+      <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.04] tracking-[-0.02em] text-[#152033] sm:text-[4.5rem] lg:text-[6.5rem]">
         {copy.headline}{" "}
         <span className="bg-[linear-gradient(135deg,#146ef5,#60a5fa)] bg-clip-text italic text-transparent">
           {copy.accent}
