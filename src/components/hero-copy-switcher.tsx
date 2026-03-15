@@ -28,7 +28,7 @@ const audienceCopy: Record<
     secondaryCta: "See the problem we solve",
   },
   revops: {
-    headline: "Fix the CRM issues slowing down your revenue team.",
+    headline: "Fix the CRM issues slowing revenue down.",
     accent: "Systematically.",
     body:
       "Pilot Connect helps RevOps teams clean structure, enrich the right records, and build reliable scoring and refresh systems that improve reporting, routing, and rep execution.",
@@ -42,7 +42,7 @@ export function HeroCopySwitcher() {
   const copy = audienceCopy[audience];
 
   return (
-    <div className="flex w-full max-w-6xl flex-col items-center text-center">
+    <div className="flex w-full max-w-5xl flex-col items-center text-center">
       <div className="inline-flex w-fit flex-wrap items-center gap-2 rounded-full border border-[rgba(20,110,245,0.14)] bg-white/88 p-1 shadow-[0_12px_30px_rgba(15,23,42,0.05)] backdrop-blur-md">
         {audienceOptions.map((option) => {
           const active = option.key === audience;
@@ -64,14 +64,14 @@ export function HeroCopySwitcher() {
         })}
       </div>
 
-      <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.04] tracking-[-0.02em] text-[#152033] sm:text-[4.5rem] lg:text-[6.5rem]">
+      <h1 className="mt-8 max-w-4xl font-serif text-5xl leading-[1.05] tracking-[-0.018em] text-[#152033] sm:text-[4rem] lg:max-w-[22ch] lg:text-[5.1rem]">
         {copy.headline}{" "}
         <span className="bg-[linear-gradient(135deg,#146ef5,#60a5fa)] bg-clip-text italic text-transparent">
           {copy.accent}
         </span>
       </h1>
 
-      <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] sm:text-lg">
+      <p className="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)] sm:text-lg lg:max-w-[50rem]">
         {copy.body}
       </p>
 

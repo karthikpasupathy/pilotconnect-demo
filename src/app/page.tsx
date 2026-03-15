@@ -1,11 +1,11 @@
 import {
-  ArrowUp,
   BrushCleaning,
   Search,
   Sparkles,
   Target,
   type LucideIcon,
 } from "lucide-react";
+import { BackToTopButton } from "@/components/back-to-top-button";
 import { HeroCopySwitcher } from "@/components/hero-copy-switcher";
 
 type ProcessIconType = "cleanup" | "enrichment" | "layers" | "scoring";
@@ -173,7 +173,7 @@ export default function Home() {
 
         <div
           id="top"
-          className="relative mx-auto mt-8 max-w-7xl overflow-hidden rounded-[2rem] border border-[rgba(20,110,245,0.12)] bg-[linear-gradient(180deg,rgba(255,255,255,0.985),rgba(247,251,255,0.97))] px-6 py-10 shadow-[0_28px_90px_rgba(15,23,42,0.07)] sm:px-10 sm:py-14 lg:px-14 lg:py-18"
+          className="relative mx-auto mt-8 max-w-7xl overflow-hidden rounded-[2rem] border border-[rgba(20,110,245,0.12)] bg-[linear-gradient(180deg,rgba(255,255,255,0.985),rgba(247,251,255,0.97))] px-6 py-10 shadow-[0_28px_90px_rgba(15,23,42,0.07)] sm:px-10 sm:py-12 lg:px-14 lg:py-14"
         >
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(96,165,250,0.18),transparent_24%),radial-gradient(circle_at_18%_22%,rgba(20,110,245,0.08),transparent_22%),radial-gradient(circle_at_82%_18%,rgba(96,165,250,0.08),transparent_22%)]" />
           <div className="pointer-events-none absolute inset-x-[14%] top-28 h-40 rounded-full bg-[radial-gradient(circle,rgba(96,165,250,0.14),transparent_68%)] blur-3xl" />
@@ -181,8 +181,6 @@ export default function Home() {
           <div className="pointer-events-none absolute -right-12 bottom-10 h-52 w-52 rounded-full bg-[radial-gradient(circle,rgba(20,110,245,0.08),transparent_68%)] blur-3xl" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(20,110,245,0.035))]" />
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[linear-gradient(90deg,transparent,rgba(20,110,245,0.025))] lg:block" />
-          <div className="pointer-events-none absolute inset-[18px] rounded-[1.7rem] border border-white/70" />
-
           <div className="relative flex flex-col items-center text-center">
             <div className="mt-8 flex w-full justify-center">
               <HeroCopySwitcher />
@@ -448,16 +446,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="hidden justify-end pr-4 pb-6 lg:flex">
-        <a
-          href="#top"
-          aria-label="Back to top"
-          className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(20,110,245,0.14)] bg-[linear-gradient(135deg,#146ef5,#60a5fa)] text-white shadow-[0_16px_40px_rgba(20,110,245,0.22)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(20,110,245,0.28)]"
-        >
-          <ArrowUp aria-hidden="true" className="h-5 w-5 text-white" strokeWidth={2.2} />
-        </a>
-      </div>
-
       <footer className="mx-auto max-w-7xl px-5 pb-12 sm:px-8 lg:px-12">
         <div className="rounded-[2rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(248,251,255,0.94))] px-8 py-8 shadow-[0_16px_40px_rgba(15,23,42,0.04)] sm:px-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
@@ -535,6 +523,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <BackToTopButton />
     </main>
   );
 }
