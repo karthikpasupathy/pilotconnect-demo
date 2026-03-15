@@ -431,7 +431,7 @@ export default function Home() {
           <div className="relative mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="mailto:hello@pilotconnect.co"
-              className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#146ef5,#60a5fa)] px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(20,110,245,0.28)]"
+              className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#146ef5,#60a5fa)] px-6 py-3.5 text-sm font-semibold !text-white transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(20,110,245,0.28)]"
             >
               hello@pilotconnect.co
             </a>
