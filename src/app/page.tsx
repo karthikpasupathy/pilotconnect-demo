@@ -4,35 +4,35 @@ import { DashboardPreview } from "@/components/dashboard-preview";
 type ProcessIconType = "cleanup" | "enrichment" | "layers" | "scoring";
 
 const metrics = [
-  { value: "2M+", label: "records cleaned, enriched, and scored" },
-  { value: "40+", label: "CRM projects shipped across B2B teams" },
-  { value: "7 days", label: "to first delivery for most engagements" },
+  { value: "Hidden", label: "revenue already exists inside most CRMs" },
+  { value: "Messy", label: "data makes good reps work like researchers" },
+  { value: "Fixable", label: "systems beat one-time cleanup every time" },
 ];
 
 const process = [
   {
     id: "cleanup",
     icon: "cleanup" as ProcessIconType,
-    title: "CRM Cleanup",
-    body: "We find and fix every duplicate, junk record, and orphaned contact.",
+    title: "Diagnose the mess",
+    body: "We start with the real question: where is your team losing time, missing context, or routing the wrong leads?",
   },
   {
     id: "enrichment",
     icon: "enrichment" as ProcessIconType,
-    title: "Enrichment",
-    body: "We fill every gap using 50+ data providers. Emails, LinkedIn URLs, firmographics. All verified. All done.",
+    title: "Clean and enrich",
+    body: "We fix duplicates, stale contacts, broken associations, and missing fields so the CRM becomes usable again.",
   },
   {
     id: "layers",
     icon: "layers" as ProcessIconType,
-    title: "Data Layers",
-    body: "Custom data points your team used to Google manually. Hiring signals, funding rounds, pricing tiers.",
+    title: "Add buying context",
+    body: "We bring the research your reps already do into the system itself: contacts, accounts, signals, and useful context.",
   },
   {
     id: "scoring",
     icon: "scoring" as ProcessIconType,
-    title: "Lead Scoring",
-    body: "Every contact gets an ICP score and a summary in plain English. Your team knows exactly who to call first.",
+    title: "Build the operating layer",
+    body: "We turn cleanup into an ongoing system with scoring, prioritization, and refresh rules that match how your team sells.",
   },
 ];
 
@@ -45,11 +45,11 @@ const processIcons: Record<ProcessIconType, LucideIcon> = {
 
 const offerings = [
   "CRM cleanup and deduplication",
-  "Lead enrichment waterfall",
+  "Account and contact enrichment",
   "Lead scoring and prioritization",
-  "Dormant database reactivation",
-  "RevOps-ready field architecture",
-  "Outbound list preparation",
+  "Dormant pipeline reactivation",
+  "Field mapping and data structure",
+  "Ongoing refresh systems",
 ];
 
 const stack = [
@@ -63,42 +63,41 @@ const stack = [
   "LeadMagic",
 ];
 
-const testimonials = [
+const useCases = [
   {
-    quote:
-      "The output was clean, the process was straightforward, and our reps finally trusted what was inside the CRM.",
-    name: "Naveen Prabhu",
-    role: "Co-Founder, GetReplies",
+    title: "Your reps are wasting time on bad data",
+    body: "If account executives are researching every call from scratch, chasing stale contacts, or working low-fit leads, the CRM is costing revenue instead of supporting it.",
   },
   {
-    quote:
-      "Wrong numbers, departed contacts, stale records. Pilot Connect cleaned the database fast enough that the difference was immediate.",
-    name: "Priyank Shah",
-    role: "Global CXO & Board Advisor",
+    title: "Your CRM cannot be trusted",
+    body: "Duplicates, broken ownership, missing fields, and outdated records make reporting weaker and execution slower across sales, marketing, and RevOps.",
   },
   {
-    quote:
-      "The biggest win was speed. Research that used to happen before every call was already there, accurate and usable.",
-    name: "Priya M.",
-    role: "Head of Revenue Operations, SaaS Startup",
+    title: "You already have pipeline hiding in the database",
+    body: "The opportunity is often not more lead volume. It is better enrichment, better prioritization, and a cleaner system for acting on the demand you already have.",
   },
 ];
 
 const faqs = [
   {
-    question: "Who is this for?",
+    question: "What problem does this solve?",
     answer:
-      "B2B teams sitting on a CRM full of aging contacts, patchy enrichment, or no clear way to prioritize who matters next.",
+      "Pilot Connect fixes the GTM engineering problem underneath pipeline inefficiency: stale CRM data, missing context, weak prioritization, and too much manual research before reps can act.",
   },
   {
-    question: "How quickly can you start?",
+    question: "Who is this best for?",
     answer:
-      "The current offer promises first delivery in as little as 7 days, which is the timeline this redesign reinforces.",
+      "B2B teams with an existing CRM, active pipeline, and enough lead volume that bad data is starting to waste rep time or blur decision-making.",
   },
   {
-    question: "Do you replace our CRM?",
+    question: "Why not just buy more leads?",
     answer:
-      "No. Pilot Connect improves the data layer inside the systems your team already uses so sales and ops move faster.",
+      "Because more volume does not fix broken systems. If the current CRM is messy, adding more records often increases waste. The higher-leverage move is making the existing system usable first.",
+  },
+  {
+    question: "Do you replace our CRM or sales process?",
+    answer:
+      "No. Pilot Connect strengthens the data and operating layer behind the tools your team already uses, so sales, marketing, and RevOps can perform better inside the current stack.",
   },
 ];
 
@@ -122,23 +121,23 @@ export default function Home() {
                 Pilot Connect
               </div>
               <div className="text-sm text-white/80">
-                Revenue data, rebuilt for action
+                GTM data systems that create leverage
               </div>
             </div>
           </a>
 
           <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] lg:flex">
             <a className="transition hover:text-white" href="#services">
-              Services
+              Solutions
             </a>
             <a className="transition hover:text-white" href="#process">
-              Process
+              Approach
             </a>
             <a className="transition hover:text-white" href="#proof">
-              Proof
+              Problem
             </a>
-            <a className="transition hover:text-white" href="#founder">
-              Founder
+            <a className="transition hover:text-white" href="#use-cases">
+              When to Choose
             </a>
           </nav>
 
@@ -147,7 +146,7 @@ export default function Home() {
             className="rounded-full border border-[rgba(255,199,92,0.35)] bg-[linear-gradient(135deg,#ffd27d,#ff9f1c)] px-4 py-2 text-sm font-medium text-black transition hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(255,159,28,0.28)]"
             style={{ color: "#120d05" }}
           >
-            Start a free sample
+            Get a free sample
           </a>
         </header>
 
@@ -160,41 +159,35 @@ export default function Home() {
 
           <div className="relative">
             <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(255,199,92,0.24)] bg-[rgba(255,199,92,0.08)] px-4 py-2 text-xs uppercase tracking-[0.28em] text-[#ffd98d]">
-              CRM Cleanup, Enrichment & Lead Scoring
+              GTM Engineering for CRM Cleanup, Enrichment & Prioritization
             </div>
 
-            <h1 className="mt-8 max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-[#fff7e8] sm:text-6xl lg:text-8xl">
-              Your CRM is full of revenue.{" "}
+            <h1 className="mt-8 max-w-4xl font-serif text-5xl leading-[1.02] tracking-[-0.03em] text-[#fff7e8] sm:text-6xl lg:text-8xl">
+              Turn messy CRM data into more revenue.{" "}
               <span className="italic text-[#ffc75c]">
-                You just can&apos;t see it yet.
+                Faster.
               </span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)] sm:text-lg">
-              Pilot Connect cleans, enriches, and scores dormant B2B data so
-              your team knows exactly who to contact, why now, and what is
-              worth pursuing first.
+              We clean and enrich your CRM, surface the best accounts to work,
+              and build the scoring and refresh systems that help sales and
+              RevOps create more pipeline from the data you already own.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#ffd27d,#ff9f1c)] px-6 py-3.5 text-sm font-semibold text-black transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(255,159,28,0.4)]"
+                className="inline-flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#ffd27d,#ff9f1c)] px-6 py-3.5 text-sm font-semibold text-black transition hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(255,159,28,0.4)]"
                 style={{ color: "#120d05" }}
               >
-                Book a strategy call
-                <span
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
-                  style={{ color: "#120d05" }}
-                >
-                  -&gt;
-                </span>
+                Book a discovery call
               </a>
               <a
-                href="#process"
+                href="#proof"
                 className="inline-flex items-center justify-center rounded-full border border-[var(--line)] bg-white/3 px-6 py-3.5 text-sm font-medium text-white/88 transition hover:-translate-y-1 hover:border-[rgba(255,199,92,0.32)] hover:bg-white/6"
               >
-                See how the system works
+                See the problem we solve
               </a>
             </div>
           </div>
@@ -229,16 +222,16 @@ export default function Home() {
       >
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
-            Services
+            Solutions
           </p>
-          <h2 className="mt-4 font-serif text-4xl tracking-[-0.05em] text-[#fff7e8] sm:text-6xl">
-            A premium data layer for teams that want cleaner pipeline, not more
-            dashboards.
+          <h2 className="mt-4 font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-6xl">
+            The GTM engineering problem is rarely lead volume. It is usually
+            bad structure, stale data, and unclear prioritization.
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            We clean CRM chaos, enrich every account with real buying context,
-            and score your database so revenue teams can focus on the
-            opportunities most likely to move.
+            When reps work around the CRM instead of through it, every team gets
+            slower. Pilot Connect fixes the operating layer underneath revenue
+            so the database becomes something your team can trust and use.
           </p>
         </div>
 
@@ -252,9 +245,9 @@ export default function Home() {
               <p className="text-sm text-[#ffd27d]">0{index + 1}</p>
               <h3 className="mt-3 text-2xl font-medium text-white">{item}</h3>
               <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-                Structured for B2B revenue teams that need fewer guesses, better
-                prioritization, and cleaner execution inside the CRM they
-                already run.
+                Built for B2B teams that already have leads and tools, but need
+                cleaner execution, stronger context, and clearer next actions
+                inside the CRM.
               </p>
             </article>
           ))}
@@ -268,15 +261,16 @@ export default function Home() {
         <div>
           <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
-              Process
+              Approach
             </p>
-            <h2 className="mt-4 font-serif text-4xl tracking-[-0.05em] text-[#fff7e8] sm:text-6xl">
-              The workflow feels bespoke, but it is built to move fast.
+            <h2 className="mt-4 font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-6xl">
+              We do not start with tools. We start with the bottleneck behind
+              your revenue motion.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--muted)]">
-              Instead of generic &ldquo;we do data&rdquo; language, this section
-              shows a clear transformation path from messy CRM to ranked
-              pipeline.
+              The transcript made one thing clear: the best positioning is
+              consultative. We diagnose the real friction first, then build the
+              cleanup and enrichment system around it.
             </p>
           </div>
 
@@ -315,13 +309,14 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
                 Trusted tools
               </p>
-              <h2 className="mt-4 font-serif text-4xl tracking-[-0.05em] text-[#fff7e8] sm:text-5xl">
-                Built for modern GTM stacks, not against them.
+              <h2 className="mt-4 font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-5xl">
+                Built inside the stack your team already relies on.
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-[var(--muted)]">
-              The live site already names the ecosystem. Here it becomes part of
-              the visual identity instead of looking like an afterthought.
+              The work is not about replacing your systems. It is about making
+              the current stack more useful for the people carrying quota and
+              the teams supporting them.
             </p>
           </div>
 
@@ -338,89 +333,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-18 sm:px-8 lg:px-12">
-        <div className="grid gap-4 lg:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <blockquote
-              key={testimonial.name}
-              className="rounded-[1.75rem] border border-[var(--line)] bg-[var(--panel)] p-7 transition duration-300 hover:-translate-y-1.5 hover:border-[rgba(255,199,92,0.35)]"
-            >
-              <p className="text-sm uppercase tracking-[0.3em] text-[#ffd98d]">
-                ★★★★★
-              </p>
-              <p className="mt-5 font-serif text-2xl leading-9 tracking-[-0.03em] text-[#fff7e8]">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-              <footer className="mt-8 border-t border-[var(--line)] pt-5">
-                <p className="text-sm font-medium text-white">
-                  {testimonial.name}
-                </p>
-                <p className="mt-1 text-sm text-[var(--muted)]">
-                  {testimonial.role}
-                </p>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
       <section
-        id="founder"
+        id="use-cases"
         className="mx-auto max-w-7xl px-5 py-18 sm:px-8 lg:px-12"
       >
-        <div className="grid gap-6 rounded-[2rem] border border-[var(--line)] bg-[var(--panel-strong)] p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
-          <div className="rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,199,92,0.1),rgba(255,255,255,0.02))] p-7">
-            <div className="inline-flex rounded-[1.9rem] bg-[linear-gradient(135deg,#ffcf70,#ff9f1c)] p-[2px] shadow-[0_18px_48px_rgba(255,159,28,0.22)]">
-              <div className="overflow-hidden rounded-[1.8rem] bg-[#101010]">
-                <img
-                  src="/founder.jpg"
-                  alt="Bhushan Jaisingh"
-                  className="h-24 w-24 object-cover"
-                />
-              </div>
-            </div>
-            <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
-              Founder
-            </p>
-            <h2 className="mt-3 text-3xl font-medium text-white">
-              Bhushan Jaisingh
-            </h2>
-            <p className="mt-2 text-[var(--muted)]">
-              14+ years in B2B sales, marketing, and revenue operations.
-            </p>
-            <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
-              The live site highlights founder-led trust, a prior $4M annual
-              scale story, and hands-on CRM experience. That remains central
-              here, but presented with more confidence and less clutter.
-            </p>
-          </div>
+        <div className="max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
+            When to choose Pilot Connect
+          </p>
+          <h2 className="mt-4 font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-6xl">
+            Pilot Connect is for teams that already feel the drag of messy CRM
+            data.
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+            When data quality starts slowing down revenue, the symptoms show up
+            everywhere: weaker prioritization, slower reps, noisier reporting,
+            and pipeline that never gets worked properly.
+          </p>
+        </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-6">
-              <p className="font-serif text-5xl text-[#ffd27d]">14+</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
-                Years across B2B growth systems
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
+          {useCases.map((item) => (
+            <article
+              key={item.title}
+              className="flex h-full flex-col rounded-[1.75rem] border border-[var(--line)] bg-[var(--panel)] p-7 transition duration-300 hover:-translate-y-1.5 hover:border-[rgba(255,199,92,0.35)]"
+            >
+              <h3 className="min-h-[5.5rem] font-serif text-3xl leading-[1.06] tracking-[-0.02em] text-[#fff7e8]">
+                {item.title}
+              </h3>
+              <p className="mt-6 text-sm leading-7 text-[var(--muted)]">
+                {item.body}
               </p>
-            </div>
-            <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-6">
-              <p className="font-serif text-5xl text-[#ffd27d]">$4M</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
-                Previous business scaled annually before exit
-              </p>
-            </div>
-            <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-6">
-              <p className="font-serif text-5xl text-[#ffd27d]">50+</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
-                Data providers across the enrichment waterfall
-              </p>
-            </div>
-            <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-6">
-              <p className="font-serif text-5xl text-[#ffd27d]">Hands-on</p>
-              <p className="mt-3 text-sm uppercase tracking-[0.22em] text-[var(--muted)]">
-                Founder-led execution, not outsourced mystery work
-              </p>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -430,24 +375,27 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.3em] text-[#ffd98d]">
               FAQ
             </p>
-            <h2 className="mt-4 font-serif text-4xl tracking-[-0.05em] text-[#fff7e8] sm:text-5xl">
-              Questions buyers ask before they trust the data.
+            <h2 className="mt-4 font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-5xl">
+              Questions teams ask before they invest in backend GTM work.
             </h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <div
+              <details
                 key={faq.question}
-                className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-6"
+                className="group rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] px-6 py-5 transition duration-300 open:border-[rgba(255,199,92,0.35)] open:bg-[rgba(18,18,18,0.94)]"
               >
-                <h3 className="text-xl font-medium text-white">
-                  {faq.question}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-medium text-white">
+                  <span>{faq.question}</span>
+                  <span className="text-2xl leading-none text-[#ffd27d] transition-transform duration-300 group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 pr-8 text-sm leading-7 text-[var(--muted)]">
                   {faq.answer}
                 </p>
-              </div>
+              </details>
             ))}
           </div>
         </div>
@@ -464,13 +412,14 @@ export default function Home() {
           <p className="relative text-xs uppercase tracking-[0.3em] text-[#fff1cf]">
             Start here
           </p>
-          <h2 className="relative mt-4 max-w-4xl font-serif text-4xl tracking-[-0.05em] text-[#fff7e8] sm:text-6xl">
-            Your CRM will not fix itself. Pilot Connect can.
+          <h2 className="relative mt-4 max-w-4xl font-serif text-4xl leading-[1.04] tracking-[-0.025em] text-[#fff7e8] sm:text-6xl">
+            If your team is already feeling the cost of messy CRM data, this is
+            the work to do next.
           </h2>
           <p className="relative mt-5 max-w-2xl text-base leading-8 text-[#f3dfb5]/78 sm:text-lg">
-            This version is ready for Vercel or Netlify and gives your friend a
-            much stronger foundation to extend with booking, case studies, and
-            real brand assets.
+            The message here is simple: stop adding complexity on top of broken
+            foundations. Clean the system, enrich what matters, and give the
+            team a better way to focus.
           </p>
           <div className="relative mt-8 flex flex-col gap-4 sm:flex-row">
             <a

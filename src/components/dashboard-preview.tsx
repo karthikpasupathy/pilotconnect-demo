@@ -65,9 +65,9 @@ function createRadarBlips(count = 3): RadarBlip[] {
 }
 
 const outcomes = [
-  "Duplicate records removed",
-  "Missing emails and numbers found",
-  "High-intent leads surfaced",
+  "Duplicates and stale records removed",
+  "Missing context filled where reps need it",
+  "Priority accounts surfaced faster",
 ];
 
 export function DashboardPreview() {
@@ -89,7 +89,7 @@ export function DashboardPreview() {
     <div className="w-full rounded-[2rem] border border-[rgba(255,199,92,0.18)] bg-[rgba(13,13,13,0.84)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:p-6">
       <div className="border-b border-[var(--line)] pb-4">
         <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-          Pipeline recovery dashboard
+          GTM systems preview
         </p>
       </div>
 
@@ -98,7 +98,7 @@ export function DashboardPreview() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-                        Dormant accounts re-ranked
+                        Accounts re-prioritized
                       </p>
                       <p className="mt-2 text-4xl font-semibold text-[#fff4d8]">
                         {dormantAccounts}
@@ -165,16 +165,16 @@ export function DashboardPreview() {
               +{contactHealth}%
             </p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Better verified coverage across key buying committee roles.
+              Better usable coverage across the contacts that matter.
             </p>
           </div>
           <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--panel)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[rgba(255,199,92,0.36)]">
             <p className="text-xs uppercase tracking-[0.24em] text-[var(--muted)]">
-              Rep focus
+              Rep efficiency
             </p>
             <p className="mt-3 text-3xl font-semibold text-white">3x faster</p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              Less pre-call research and cleaner routing for outbound.
+              Less manual research and clearer prioritization before outreach.
             </p>
           </div>
         </div>

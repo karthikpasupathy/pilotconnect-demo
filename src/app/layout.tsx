@@ -15,9 +15,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Pilot Connect | Premium CRM Cleanup & Revenue Data Enrichment",
+  title: "Pilot Connect | GTM Engineering for CRM Cleanup and Revenue Systems",
   description:
-    "Pilot Connect cleans, enriches, and scores B2B CRM data so dormant contacts turn into qualified pipeline in days, not quarters.",
+    "Pilot Connect helps B2B teams clean CRM data, enrich the right records, and build GTM systems that improve prioritization, efficiency, and pipeline execution.",
   robots: {
     index: false,
     follow: false,
